@@ -1,0 +1,15 @@
+.container{
+    background-color: #6666;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    align-items: center;
+    padding: 0 1em;
+}
+
+.links{
+    padding: 0 .5em;
+    text-decoration: none;
+    color: #494949;
+}

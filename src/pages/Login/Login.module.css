@@ -1,0 +1,26 @@
+.body{
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    justify-content: center;
+    margin: 0 auto;
+    
+}
+
+.input{
+    border: none;
+    border-bottom: 1px solid #db2ba8;
+    margin-bottom: 1em;
+}
+
+.input:focus{
+    outline: none;
+}
