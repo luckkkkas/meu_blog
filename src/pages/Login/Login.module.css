@@ -12,6 +12,7 @@
     width: 400px;
     justify-content: center;
     margin: 0 auto;
+    font-size: x-large;
     
 }
 
@@ -19,8 +20,37 @@
     border: none;
     border-bottom: 1px solid #db2ba8;
     margin-bottom: 1em;
+    font-size: x-large;
 }
 
 .input:focus{
     outline: none;
+}
+
+.butonCon{
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    padding-top: 20px;
+}
+
+.login{
+    background-color: #494949;
+    color: white;
+    border: none;
+    width: 100px;
+}
+
+.createAccount{
+    background-color: transparent;
+    border: none;
+    color: #494949;
+    
+}
+
+.createAccount:hover{
+    color: #db2ba8;
+    background-color: transparent;
+    border: none;
+    border-bottom: #db2ba8;
 }

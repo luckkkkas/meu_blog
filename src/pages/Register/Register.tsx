@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import style from './Register.module.css';
+import { useAuthentication } from '../../hooks/useAuthentication';
 
 const Register = () => {
   const [name, setName] = useState('');
@@ -8,20 +9,34 @@ const Register = () => {
   const [rePass, setRePass] = useState('');
   const [wrongpass,setWrogpass] = useState(false);
 
-  function verify(e: any){
+  const { createUser, error } = useAuthentication();
+
+  async function verify(e: any){
     e.preventDefault()
+
+    const user = {
+      name,
+      email,
+      pass
+    }
+
+
     if(pass !== rePass){
       setWrogpass(true);
       return
     }
     setWrogpass(false);
-  
+
+    const res = await createUser(user);
+
+    console.log(res)
   }
   
   return (
     
     <div >
-      {wrongpass && <p className={style.wrong}>as senhas não são iguais</p>}
+      {wrongpass && <p className='wrong'>as senhas não são iguais</p>}
+      {error && <p className={style.wrong}>{error}</p>}
       <form onSubmit={verify} className={style.container}> 
         <label className={style.inputContainer}>
           <span>Nome:</span>

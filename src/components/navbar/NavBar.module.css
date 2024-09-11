@@ -13,3 +13,7 @@
     text-decoration: none;
     color: #494949;
 }
+
+.image{
+    max-height: 8vh;
+}

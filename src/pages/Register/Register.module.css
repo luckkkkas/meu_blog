@@ -4,10 +4,12 @@
     align-items: center;
     justify-content: center;
     height: 80vh;
+    width: 100%;
+
 }
 
 .inputContainer{
-
+    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -20,6 +22,8 @@
 .input{
     border: none;
     border-bottom: 1px solid #db2bdb;
+    width: 400px;
+    font-size: x-large;
 }
 
 .input:focus{
@@ -32,6 +36,7 @@
     font-size: x-large;
     width: 150px;
     border: 1px solid #db2bdb;
+    margin-top: 20px;
 }
 
 .button:hover{
@@ -42,13 +47,3 @@
     cursor: pointer;
 }
 
-.wrong{
-    background-color: lightcoral;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    width: auto;
-    color: red;
-    font-weight: bold;
-}

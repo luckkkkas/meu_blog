@@ -1,0 +1,36 @@
+button{
+    background-color: #666;
+    color: white;
+    font-size: x-large;
+    width: 150px;
+    border: 1px solid #db2bdb;
+}
+
+button:hover{
+    background-color: #494949;
+    color: #db2bdb;
+    transition: .5s;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+
+.loading{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+}
+
+.wrong{
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: auto;
+    color: red;
+    font-weight: bold;
+}
