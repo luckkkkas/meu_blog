@@ -2,6 +2,7 @@ import { useState } from 'react';
 import style from './Login.module.css';
 import { useAuthentication } from '../../hooks/useAuthentication';
 import { Idata } from '../../hooks/types.ts/type';
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [pass, setPass] = useState('');
@@ -16,7 +17,7 @@ const Login = () => {
   const verifyLogin = ( profile:Idata) =>{
     login(profile);
   }
-  const controllerLogin = (e: any) => {
+  const controllerLogin = (e) => {
     e.preventDefault();
     verifyLogin(profile);
   }
@@ -36,7 +37,7 @@ const Login = () => {
             <input className={style.input} type="password" required value={pass} onChange={(e)=>setPass(e.target.value)} />
           </label>
           <div className={style.butonCon}>
-          <button className={style.createAccount}>Criar Conta</button>
+          <Link className={style.createAccount} to={'/register'}>Criar Conta</Link>
           <input className={style.login} type="submit" value='Entrar'/>
           </div>
         </form>  
